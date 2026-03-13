@@ -1,8 +1,9 @@
 <div id="top">
 
 <!-- HEADER STYLE: CLASSIC -->
-<div align="center">
-# GMA PAPI CHECKER
+<img src="readmeai/assets/logos/purple.svg" width="30%" style="position: relative; top: 0; right: 0;" alt="Project Logo"/>
+
+# GMAP API CHECKER
 
 <em></em>
 
