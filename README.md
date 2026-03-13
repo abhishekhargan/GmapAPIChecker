@@ -2,10 +2,7 @@
 
 <!-- HEADER STYLE: CLASSIC -->
 <div align="center">
-
-<img src="readmeai/assets/logos/purple.svg" width="30%" style="position: relative; top: 0; right: 0;" alt="Project Logo"/>
-
-# GMAPAPICHECKER.GIT
+# GMA PAPI CHECKER
 
 <em></em>
 
@@ -52,7 +49,7 @@
 
 ## Features
 
-<code>❯ REPLACE-ME</code>
+<code> Scans the google map API and generates a PDF conatins results</code>
 
 ---
 
@@ -113,34 +110,16 @@ Build GmapAPIChecker.git from the source and intsall dependencies:
 2. **Navigate to the project directory:**
 
     ```sh
-    ❯ cd GmapAPIChecker.git
+    ❯ cd GmapAPIChecker
     ```
 
 3. **Install the dependencies:**
-
-echo 'INSERT-INSTALL-COMMAND-HERE'
 
 ### Usage
 
 Run the project with:
 
-echo 'INSERT-RUN-COMMAND-HERE'
-
-### Testing
-
-Gmapapichecker.git uses the {__test_framework__} test framework. Run the test suite with:
-
-echo 'INSERT-TEST-COMMAND-HERE'
-
----
-
-## Roadmap
-
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
-
----
+Python3 apichecker.py
 
 ## Contributing
 
@@ -188,16 +167,6 @@ echo 'INSERT-TEST-COMMAND-HERE'
 ## License
 
 Gmapapichecker.git is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-## Acknowledgments
-
-- Credit `contributors`, `inspiration`, `references`, etc.
-
-<div align="right">
-
-[![][back-to-top]](#top)
 
 </div>
 
