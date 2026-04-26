@@ -1,180 +1,102 @@
-<div id="top">
+<h1 align="center">🗺️ GMaps API Key Vulnerability Scanner</h1>
 
-<!-- HEADER STYLE: CLASSIC -->
-<div align="center">
+A comprehensive Python tool designed to audit Google Maps and Firebase API keys for overly permissive configurations. It checks a given API key against 18 different Google Cloud APIs to determine if it is publicly exposed and vulnerable to unauthorized use, potentially leading to financial loss for the key owner.
 
-<img src="readmeai/assets/logos/purple.svg" width="30%" style="position: relative; top: 0; right: 0;" alt="Project Logo"/>
+![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-# GMAP API CHECKER
+## ✨ Features
 
-<em></em>
+- **Comprehensive Scanning**: Tests API keys against 18 distinct Google Maps, Roads, Places, and Firebase endpoints.
+- **Proof of Concept (PoC)**: For every vulnerable API detected, the tool provides the exact URL or `curl` command to demonstrate the vulnerability.
+- **Multi-Format Reporting**:
+  - **Terminal Output**: Color-coded console output for immediate feedback.
+  - **Text Logs**: Timestamped `.txt` logs saved for record-keeping.
+  - **HTML Reports**: Clean, styled, and responsive HTML reports.
+  - **PDF Reports**: Auto-generated landscape PDF reports (requires Playwright).
+- **Zero Footprint**: No external configuration files needed; just run the script and input the key.
 
-<!-- BADGES -->
-<img src="https://img.shields.io/github/license/abhishekhargan/GmapAPIChecker.git?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
-<img src="https://img.shields.io/github/last-commit/abhishekhargan/GmapAPIChecker.git?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-<img src="https://img.shields.io/github/languages/top/abhishekhargan/GmapAPIChecker.git?style=default&color=0080ff" alt="repo-top-language">
-<img src="https://img.shields.io/github/languages/count/abhishekhargan/GmapAPIChecker.git?style=default&color=0080ff" alt="repo-language-count">
+## 🕵️‍♂️ Tested APIs
 
-<!-- default option, no dependency badges. -->
+This tool checks for unauthorized access to the following Google Cloud APIs:
 
+| Category | APIs Checked |
+| :--- | :--- |
+| **Maps** | Static Maps, Street View, Directions, Geocoding, Distance Matrix, Elevation, Time Zone |
+| **Places** | Find Place From Text, Places Autocomplete, Place Details, Nearby Search, Text Search, Places Photo |
+| **Roads** | Nearest Roads, Snap to Roads, Speed Limits |
+| **Other** | Geolocation, Firebase Cloud Messaging (FCM) |
 
-<!-- default option, no dependency badges. -->
-
-</div>
-<br>
-
----
-
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Overview](#overview)
-- [Features](#features)
-- [Project Structure](#project-structure)
-    - [Project Index](#project-index)
-- [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Testing](#testing)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-
----
-
-## Overview
-
-
-
----
-
-## Features
-
-<code> Scans the google map API and generates a PDF conatins results</code>
-
----
-
-## Project Structure
-
-```sh
-└── GmapAPIChecker.git/
-    ├── README.md
-    └── apichecker.py
-```
-
-### Project Index
-
-<details open>
-	<summary><b><code>GMAPAPICHECKER.GIT/</code></b></summary>
-	<!-- __root__ Submodule -->
-	<details>
-		<summary><b>__root__</b></summary>
-		<blockquote>
-			<div class='directory-path' style='padding: 8px 0; color: #666;'>
-				<code><b>⦿ __root__</b></code>
-			<table style='width: 100%; border-collapse: collapse;'>
-			<thead>
-				<tr style='background-color: #f8f9fa;'>
-					<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-					<th style='text-align: left; padding: 8px;'>Summary</th>
-				</tr>
-			</thead>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://github.com/abhishekhargan/GmapAPIChecker.git/blob/master/apichecker.py'>apichecker.py</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-				</tr>
-			</table>
-		</blockquote>
-	</details>
-</details>
-
----
-
-## Getting Started
-
-### Prerequisites
-
-This project requires the following dependencies:
-
-- **Programming Language:** Python
-
-### Installation
-
-Build GmapAPIChecker.git from the source and intsall dependencies:
+## 🛠️ Installation
 
 1. **Clone the repository:**
-
-    ```sh
-    ❯ git clone https://github.com/abhishekhargan/GmapAPIChecker.git
-    ```
-
-2. **Navigate to the project directory:**
-
-    ```sh
-    ❯ cd GmapAPIChecker
-    ```
-
-3. **Install the dependencies:**
-
-### Usage
-
-Run the project with:
-
-Python3 apichecker.py
-
-## Contributing
-
-- **💬 [Join the Discussions](https://github.com/abhishekhargan/GmapAPIChecker.git/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://github.com/abhishekhargan/GmapAPIChecker.git/issues)**: Submit bugs found or log feature requests for the `GmapAPIChecker.git` project.
-- **💡 [Submit Pull Requests](https://github.com/abhishekhargan/GmapAPIChecker.git/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
-
-<details closed>
-<summary>Contributing Guidelines</summary>
-
-1. **Fork the Repository**: Start by forking the project repository to your github account.
-2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
-   ```sh
+   ```bash
    git clone https://github.com/abhishekhargan/GmapAPIChecker.git
+   cd apichecker
    ```
-3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
-   ```sh
-   git checkout -b new-feature-x
-   ```
-4. **Make Your Changes**: Develop and test your changes locally.
-5. **Commit Your Changes**: Commit with a clear message describing your updates.
-   ```sh
-   git commit -m 'Implemented new feature x.'
-   ```
-6. **Push to github**: Push the changes to your forked repository.
-   ```sh
-   git push origin new-feature-x
-   ```
-7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
-8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
-</details>
 
-<details closed>
-<summary>Contributor Graph</summary>
-<br>
-<p align="left">
-   <a href="https://github.com{/abhishekhargan/GmapAPIChecker.git/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=abhishekhargan/GmapAPIChecker.git">
-   </a>
-</p>
-</details>
+2. **Install required Python dependencies:**
+   ```bash
+   pip install requests
+   ```
+
+3. **(Optional) Install Playwright for PDF generation:**
+   If you want the tool to automatically generate a PDF report alongside the HTML report, install Playwright:
+   ```bash
+   pip install playwright
+   playwright install chromium
+   ```
+   *Note: If Playwright is not installed, the script will gracefully skip PDF generation and still output the HTML and TXT logs.*
+
+## 🚀 Usage
+
+Run the script from your terminal. It will prompt you to enter the API key.
+
+```bash
+python apichecker.py
+```
+
+**Example Output:**
+```text
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ ╔══════════════════════════════════╗ ┃
+┃ ║ **** Google API Checker ****     ║ ┃
+┃ ║ * Developed by Abhishek Hargan * ║ ┃
+┃ ╚══════════════════════════════════╝ ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘
+
+Please enter the Google Maps API key you want to test: AIzaSy...
+
+Starting scan for API key: AIzaSy...
+...
+API key is vulnerable for Static Maps API!
+PoC link: https://maps.googleapis.com/maps/api/staticmap?...
+...
+```
+
+## 📁 Output Files
+
+All logs and reports are automatically saved in a dynamically created `logs/` directory. Each file is timestamped to prevent overwriting.
+
+- `gmaps_scan_log_YYYYMMDD_HHMMSS.txt` - Raw console output.
+- `gmaps_scan_report_YYYYMMDD_HHMMSS.html` - A styled, interactive **HTML report** containing a summary table with clickable PoC links.
+- `gmaps_scan_report_YYYYMMDD_HHMMSS.pdf` - A printable landscape **PDF version** of the HTML report.
+
+## ⚖️ Disclaimer & Ethical Use
+
+This tool is provided for **educational purposes and authorized security auditing only**. 
+
+- Do **NOT** use this tool against API keys that you do not own or have explicit written permission to test.
+- Unauthorized scanning of API keys may violate terms of service and local laws.
+- The developer assumes no liability and is not responsible for any misuse or damage caused by this program. **Use at your own risk.**
+
+If you find a leaked API key during a Bug Bounty program, please report it responsibly to the vendor.
+
+## 🧑‍💻 Credits
+
+Developed by **Abhishek Hargan**
+- [LinkedIn](https://www.linkedin.com/in/abhishekhargan)
 
 ---
-
-## License
-
-Gmapapichecker.git is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
-</div>
-
-
-[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
-
-
----
+**💡 Pro-Tip for Developers:** To secure your own Google Maps API keys, always implement [HTTP Referrer Restrictions](https://developers.google.com/maps/documentation/embed/get-api-key#restrict_key) or [IP Address Restrictions](https://developers.google.com/maps/documentation/embed/get-api-key#restrict_key) in the Google Cloud Console.
+```
